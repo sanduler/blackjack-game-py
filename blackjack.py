@@ -18,7 +18,7 @@
 # TODO Game ends immediately when user score goes over 21 or if the user or computer gets a blackjack.
 # TODO Ask the user if they want to get another card.
 # TODO Once the user is done and no longer wants to draw any more cards, let the computer play.
-# The computer should keep drawing cards unless their score goes over 16.
+# The computer should keep drawing cards unless their score goes over 16
 # TODO Compare user and computer scores and see if it's a win, loss, or draw.
 # TODO Print out the player's and computer's final hand and their scores at the end of the game.
 # TODO After the game ends, ask the user if they'd like to play again. Clear the console for a fresh start.
