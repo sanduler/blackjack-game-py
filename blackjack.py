@@ -10,23 +10,31 @@
 
 import random
 
-start = input(
-    "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
+# start = input(
+#     "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
+# print(start)
 
-while start == 'y':
+# list of cards in the decl
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+# user cards cards
+user_cards = []
+# user cards cards
+computer_cards = []
+comp_length = len(computer_cards)
+user_length = len(user_cards)
 
-    # list of cards in the decl
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    # user cards cards
-    user_cards = []
-    # user cards cards
-    camputer_cards = []
+# start the user and the computer with two cards in the hand.
+for i in range(2):
+    user_cards.append(random.choice(cards))
+    computer_cards.append(random.choice(cards))
 
-    # start the user and the computer with two cards in the hand.
-    for i in range(2):
-        user_cards.append(random.choice(cards))
-        camputer_cards.append(random.choice(cards))
+computer_total = 0
+for computer_cards in range(comp_length):
+    print(comp_length)
+    print(computer_cards)
+    computer_total += computer_cards
 
+print(computer_total)
 # print(user_cards)
 # print(camputer_cards)
 
