@@ -10,9 +10,9 @@
 
 import random
 
-# start = input(
-#     "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
-# print(start)
+start = input(
+    "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
+print(start)
 
 # list of cards in the decl
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -44,7 +44,7 @@ print(user_total)
 
 print(f"Your cards: {user_cards}, current score: {user_total}")
 print(f"Computer's first card: {computer_cards[0]}")
-print("Type 'y' to get another card, type 'n' to pass:")
+input("Type 'y' to get another card, type 'n' to pass:")
 
 
 # TODO Deal both user and computer a starting hand of 2 random card values.
