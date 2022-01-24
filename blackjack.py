@@ -11,18 +11,6 @@
 
 import random
 
-
-def blackjack_check(blk_total):
-    if blk_total == 21:
-        return True
-    else:
-        return False
-
-
-start = input(
-    "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
-print(start)
-
 # list of cards in the decl
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 # user cards cards
@@ -31,6 +19,13 @@ user_cards = []
 computer_cards = []
 comp_length = len(computer_cards)
 user_length = len(user_cards)
+
+
+def blackjack_check(blk_total):
+    if blk_total == 21:
+        return True
+    else:
+        return False
 
 
 def draw_another():
@@ -51,14 +46,14 @@ def user_totals():
     return user_total
 
 
+start = input(
+    "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
+print(start)
+
 # start the user and the computer with two cards in the hand.
 for i in range(2):
     user_cards.append(random.choice(cards))
     computer_cards.append(random.choice(cards))
-
-user_total = 0
-for user_length in user_cards:
-    user_total += user_length
 
 
 print(f"Your cards: {user_cards}, current score: {user_totals()}")
