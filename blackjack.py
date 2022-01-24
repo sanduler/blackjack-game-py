@@ -45,57 +45,44 @@ def compare(user_score, computer_score):
         return "You Lose"
 
 
-# user cards cards
-user_cards = []
-# user cards cards
-computer_cards = []
+def game():
+    # user cards cards
+    user_cards = []
+    # user cards cards
+    computer_cards = []
 
-game_over = False
+    game_over = False
 
-for i in range(2):
-    user_cards.append(deal_card())
-    computer_cards.append(deal_card())
+    for i in range(2):
+        user_cards.append(deal_card())
+        computer_cards.append(deal_card())
 
-while not is_game_over:
-    user_score = cal_score(user_cards)
-    computer_score = cal_score(computer_cards)
+    while not is_game_over:
+        user_score = cal_score(user_cards)
+        computer_score = cal_score(computer_cards)
 
-    print(f"    Your cards: {user_cards}, current score: {user_score}")
-    print(f"    Computer's first card: {computer_cards[0]}")
+        print(f"    Your cards: {user_cards}, current score: {user_score}")
+        print(f"    Computer's first card: {computer_cards[0]}")
 
-    if user_score == 0 or computer_score == 0 or user_score > 21:
-        is_game_over = True
-    else:
-        continue_deal = input(
-            "Type 'y' to get another card, type 'n' to pass: ").lower()
-        if continue_deal == 'y':
-            user_cards.append(deal_card())
-        else:
+        if user_score == 0 or computer_score == 0 or user_score > 21:
             is_game_over = True
+        else:
+            continue_deal = input(
+                "Type 'y' to get another card, type 'n' to pass: ").lower()
+            if continue_deal == 'y':
+                user_cards.append(deal_card())
+            else:
+                is_game_over = True
 
-while computer_score != 0 and computer_score < 17:
-    computer_cards.append(deal_card())
-    computer_score = cal_score(computer_cards)
+    while computer_score != 0 and computer_score < 17:
+        computer_cards.append(deal_card())
+        computer_score = cal_score(computer_cards)
 
-print(f" Your cards: {user_cards}, final score: {user_score}")
-print(
-    f" Computer's final cards: {computer_cards}, final score: {computer_score}")
-compare(user_score, computer_score)
-# if user_score > computer_score and user_score < 21:
-#     print("You win!")
-# elif user_score < computer_score and user_score < 21:
-# # Deal both user and computer a starting hand of 2 random card values. (Done)
-# # Deal both user and computer a starting hand of 2 random card values. (Done)
-# # Detect when computer or user has a blackjack. (Ace + 10 value card). (done)
-# # If computer gets blackjack, then the user loses (even if the user also has a blackjack). (done)
-# # If the user gets a blackjack, then they win (unless the computer also has a blackjack). (done)
-# # Calculate the user's and computer's scores based on their card values. (Done)
-# #  If an ace is drawn, count it as 11. But if the total goes over 21, count the ace as 1 instead. (done)
-# #  Reveal computer's first card to the user. (Done)
-# #  Game ends immediately when user score goes over 21 or if the user or computer gets a blackjack. (done)
-# #  Ask the user if they want to get another card. (done)
-# # Once the user is done and no longer wants to draw any more cards, let the computer play. (done)
-# # The computer should keep drawing cards unless their score goes over 16 (done)
-# # TODO Compare user and computer scores and see if it's a win, loss, or draw.
-# # TODO Print out the player's and computer's final hand and their scores at the end of the game.
-# # TODO After the game ends, ask the user if they'd like to play again. Clear the console for a fresh start.
+    print(f" Your cards: {user_cards}, final score: {user_score}")
+    print(
+        f" Computer's final cards: {computer_cards}, final score: {computer_score}")
+    compare(user_score, computer_score)
+
+
+while input("Type 'y' to play another round, or type 'n' to to exit") == 'y':
+    game()
