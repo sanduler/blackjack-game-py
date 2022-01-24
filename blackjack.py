@@ -28,8 +28,12 @@ def blackjack_check(blk_total):
         return False
 
 
-def draw_another():
+def comp_draw_another():
     computer_cards.append(random.choice(cards))
+
+
+def user_draw_another():
+    user_cards.append(random.choice(cards))
 
 
 def computer_totals():
@@ -59,10 +63,21 @@ for i in range(2):
 print(f"Your cards: {user_cards}, current score: {user_totals()}")
 print(f"Computer's first card: {computer_cards[0]}")
 blackjack_check(computer_totals())
+blackjack_check(user_totals())
+
 if computer_totals() == True:
     print("computer wins")
-else:
-    draw_another()
+if user_totals() == True:
+    print("user wins")
+
+
+while user_totals() < 21:
+    another = input("Type 'y' to get another card, type 'n' to pass:").lower()
+    if another == "y":
+        user_draw_another()
+        print(f"Your cards: {user_cards}, current score: {user_totals()}")
+    else:
+        break
 
 
 # blackjack = 21
@@ -74,14 +89,14 @@ else:
 #     user_total += user_cards[2]
 #     print(user_total)
 
-# TODO Deal both user and computer a starting hand of 2 random card values.
-# TODO Deal both user and computer a starting hand of 2 random card values.
+# Deal both user and computer a starting hand of 2 random card values. (Done)
+# Deal both user and computer a starting hand of 2 random card values. (Done)
 # TODO Detect when computer or user has a blackjack. (Ace + 10 value card).
 # TODO If computer gets blackjack, then the user loses (even if the user also has a blackjack).
 # If the user gets a blackjack, then they win (unless the computer also has a blackjack).
-# TODO Calculate the user's and computer's scores based on their card values.
+# Calculate the user's and computer's scores based on their card values. (Done)
 # TODO If an ace is drawn, count it as 11. But if the total goes over 21, count the ace as 1 instead.
-# TODO Reveal computer's first card to the user.
+#  Reveal computer's first card to the user. (Done)
 # TODO Game ends immediately when user score goes over 21 or if the user or computer gets a blackjack.
 # TODO Ask the user if they want to get another card.
 # TODO Once the user is done and no longer wants to draw any more cards, let the computer play.
