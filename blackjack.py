@@ -8,6 +8,7 @@
 # The Jack, Queen, and King cards count as ten. The Ace card can count as 1 to the total or can count as 11.
 # Depending if the user went over 21 or under the user can decide the value of the Ace.
 
+
 import random
 
 start = input(
@@ -48,7 +49,7 @@ input("Type 'y' to get another card, type 'n' to pass:")
 
 
 # TODO Deal both user and computer a starting hand of 2 random card values.
-
+# TODO Deal both user and computer a starting hand of 2 random card values.
 # TODO Detect when computer or user has a blackjack. (Ace + 10 value card).
 # TODO If computer gets blackjack, then the user loses (even if the user also has a blackjack).
 # If the user gets a blackjack, then they win (unless the computer also has a blackjack).
