@@ -77,6 +77,9 @@ while computer_score != 0 and computer_score < 17:
     computer_cards.append(deal_card())
     computer_score = cal_score(computer_cards)
 
+print(f" Your cards: {user_cards}, final score: {user_score}")
+print(
+    f" Computer's final cards: {computer_cards}, final score: {computer_score}")
 compare(user_score, computer_score)
 # if user_score > computer_score and user_score < 21:
 #     print("You win!")
