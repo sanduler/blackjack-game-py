@@ -158,4 +158,4 @@ Project Link: [https://github.com/sanduler/blackjack-game-py](https://github.com
 [license-url]: https://github.com/sanduler/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: diagram/game0.png
