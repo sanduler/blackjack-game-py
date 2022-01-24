@@ -8,6 +8,47 @@
 # The Jack, Queen, and King cards count as ten. The Ace card can count as 1 to the total or can count as 11.
 # Depending if the user went over 21 or under the user can decide the value of the Ace.
 
+
+import random
+
+start = input(
+    "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
+print(start)
+
+# list of cards in the decl
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+# user cards cards
+user_cards = []
+# user cards cards
+computer_cards = []
+comp_length = len(computer_cards)
+user_length = len(user_cards)
+
+# start the user and the computer with two cards in the hand.
+for i in range(2):
+    user_cards.append(random.choice(cards))
+    computer_cards.append(random.choice(cards))
+
+computer_total = 0
+
+for comp_length in computer_cards:
+    # print(computer_cards)
+    # print(comp_length)
+    # # print(computer_cards[comp_length])
+    computer_total += comp_length
+print(computer_total)
+
+user_total = 0
+for user_length in user_cards:
+    user_total += user_length
+print(user_total)
+
+print(f"Your cards: {user_cards}, current score: {user_total}")
+print(f"Computer's first card: {computer_cards[0]}")
+input("Type 'y' to get another card, type 'n' to pass:")
+
+
+# TODO Deal both user and computer a starting hand of 2 random card values.
 # TODO Deal both user and computer a starting hand of 2 random card values.
 # TODO Detect when computer or user has a blackjack. (Ace + 10 value card).
 # TODO If computer gets blackjack, then the user loses (even if the user also has a blackjack).
