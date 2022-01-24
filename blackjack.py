@@ -10,6 +10,7 @@
 
 
 import random
+from clear_func import clear
 
 
 def deal_card():
@@ -86,3 +87,4 @@ def game():
 
 while input("Type 'y' to play another round, or type 'n' to to exit") == 'y':
     game()
+    clear()
