@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/sanduler/repo_name">
+  <a href="https://github.com/sanduler/blackjack-game-py">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,10 +34,10 @@
   <p align="center">
     Blackjack is a game that is played using cards. The gaol of the game is to add up the cars to the largest number without going over twenty-one. If the cards in the hand add up more than twenty-one then its called a bust. Meaning the game is lost imidiatly. It doesent matter how much the user goes over twenty one then the user looses. The way the cards are counted are that all the cards from 2 - 10 are counted as their face value. The Jack, Queen, and King cards count as ten. The Ace card can count as 1 to the total or can count as 11. Depending if the user went over 21 or under the user can decide the value of the Ace.
     <br />
-    <a href="https://github.com/sanduler/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/sanduler/blackjack-game-py"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/sanduler/repo_name">View Demo</a>
+    <a href="https://github.com/sanduler/blackjack-game-py">View Demo</a>
   </p>
 </div>
 
@@ -47,12 +47,7 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <p>The gaol of the game is to add up the cars to the largest number without going over twenty-one.
-# If the cards in the hand add up more than twenty-one then its called a bust.
-# Meaning the game is lost imidiatly. It doesent matter how much the user goes over twenty one then the user looses.
-# The way the cards are counted are that all the cards from 2 - 10 are counted as their face value.
-# The Jack, Queen, and King cards count as ten. The Ace card can count as 1 to the total or can count as 11.
-# Depending if the user went over 21 or under the user can decide the value of the Ace.</p>
+      <p>The goal of the game is to add up the cars to the largest number without going over twenty-one. If the cards in the hand add up more than twenty-one then its called a bust. Meaning the game is lost imidiatly. It doesent matter how much the user goes over twenty one then the user looses. The way the cards are counted are that all the cards from 2 - 10 are counted as their face value. The Jack, Queen, and King cards count as ten. The Ace card can count as 1 to the total or can count as 11. Depending if the user went over 21 or under the user can decide the value of the Ace.</p>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -107,7 +102,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/sanduler/hangman-game-py
+   git clone https://github.com/sanduler/blackjack-game-py
    ```
 2. Install NPM packages
    ```sh
@@ -121,9 +116,9 @@ This is an example of how to list things you need to use the software and how to
 ## Usage
 
 <p align="center"><a>Pictures of the game in actions are shown:</a></p>
-<a href="https://github.com/sanduler/hangman-game-py">
-    <img src="images/game.png" alt="Pictures">
-    <img src="images/win.png" alt="Pictures">
+<a href="https://github.com/sanduler/blackjack-game-py">
+    <img src="img/game1.png" alt="Pictures">
+    <img src="img/game2.png" alt="Pictures">
   </a>
 
 _For more examples, please refer to the [Documentation](https://example.com)_
@@ -144,7 +139,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Ruben Sanduleac - ruvim.sanduleac@gmail.com
 
-Project Link: [https://github.com/sanduler/hangman-game-py](https://github.com/sanduler/hangman-game-py)
+Project Link: [https://github.com/sanduler/blackjack-game-py](https://github.com/sanduler/blackjack-game-py)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
