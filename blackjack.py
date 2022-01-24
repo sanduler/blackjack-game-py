@@ -11,6 +11,14 @@
 
 import random
 
+
+def blackjack_check(blk_total):
+    if blk_total == 21:
+        return True
+    else:
+        return False
+
+
 start = input(
     "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
 print(start)
@@ -24,29 +32,52 @@ computer_cards = []
 comp_length = len(computer_cards)
 user_length = len(user_cards)
 
+
+def draw_another():
+    computer_cards.append(random.choice(cards))
+
+
+def computer_totals():
+    computer_total = 0
+    for comp_length in computer_cards:
+        computer_total += comp_length
+    return computer_total
+
+
+def user_totals():
+    user_total = 0
+    for user_length in user_cards:
+        user_total += user_length
+    return user_total
+
+
 # start the user and the computer with two cards in the hand.
 for i in range(2):
     user_cards.append(random.choice(cards))
     computer_cards.append(random.choice(cards))
 
-computer_total = 0
-
-for comp_length in computer_cards:
-    # print(computer_cards)
-    # print(comp_length)
-    # # print(computer_cards[comp_length])
-    computer_total += comp_length
-print(computer_total)
-
 user_total = 0
 for user_length in user_cards:
     user_total += user_length
-print(user_total)
 
-print(f"Your cards: {user_cards}, current score: {user_total}")
+
+print(f"Your cards: {user_cards}, current score: {user_totals()}")
 print(f"Computer's first card: {computer_cards[0]}")
-input("Type 'y' to get another card, type 'n' to pass:")
+blackjack_check(computer_totals())
+if computer_totals() == True:
+    print("computer wins")
+else:
+    draw_another()
 
+
+# blackjack = 21
+
+# while computer_total <= blackjack or user_total <= blackjack:
+#     another = input("Type 'y' to get another card, type 'n' to pass:").lower()
+#     if another == 'y':
+#         user_cards.append(random.choice(cards))
+#     user_total += user_cards[2]
+#     print(user_total)
 
 # TODO Deal both user and computer a starting hand of 2 random card values.
 # TODO Deal both user and computer a starting hand of 2 random card values.
