@@ -11,55 +11,67 @@
 
 import random
 
-start = input(
-    "Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
-print(start)
 
-# list of cards in the decl
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+def deal_card():
+    # list of cards in the deck
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    card = random.choice(cards)
+    return card
+
+
+def cal_score(cards):
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
+    return sum(cards)
+
+
 # user cards cards
 user_cards = []
 # user cards cards
 computer_cards = []
-comp_length = len(computer_cards)
-user_length = len(user_cards)
 
-# start the user and the computer with two cards in the hand.
+game_over = False
+
 for i in range(2):
-    user_cards.append(random.choice(cards))
-    computer_cards.append(random.choice(cards))
+    user_cards.append(deal_card())
+    computer_cards.append(deal_card())
 
-computer_total = 0
+while not is_game_over:
+    user_score = cal_score(user_cards)
+    computer_score = cal_score(computer_cards)
 
-for comp_length in computer_cards:
-    # print(computer_cards)
-    # print(comp_length)
-    # # print(computer_cards[comp_length])
-    computer_total += comp_length
-print(computer_total)
+    print(f"    Your cards: {user_cards}, current score: {user_score}")
+    print(f"    Computer's first card: {computer_cards[0]}")
 
-user_total = 0
-for user_length in user_cards:
-    user_total += user_length
-print(user_total)
+    if user_score == 0 or computer_score == 0 or user_score > 21:
+        is_game_over = True
+    else:
+        continue_deal = input(
+            "Type 'y' to get another card, type 'n' to pass: ").lower()
+        if continue_deal == 'y':
+            user_cards.append(deal_card())
+        else:
+            is_game_over = True
 
-print(f"Your cards: {user_cards}, current score: {user_total}")
-print(f"Computer's first card: {computer_cards[0]}")
-input("Type 'y' to get another card, type 'n' to pass:")
+while computer_score != 0 and computer_score < 17:
+    computer_cards.append(deal_card())
+    computer_score = cal_score(computer_cards)
 
-
-# TODO Deal both user and computer a starting hand of 2 random card values.
-# TODO Deal both user and computer a starting hand of 2 random card values.
-# TODO Detect when computer or user has a blackjack. (Ace + 10 value card).
-# TODO If computer gets blackjack, then the user loses (even if the user also has a blackjack).
-# If the user gets a blackjack, then they win (unless the computer also has a blackjack).
-# TODO Calculate the user's and computer's scores based on their card values.
-# TODO If an ace is drawn, count it as 11. But if the total goes over 21, count the ace as 1 instead.
-# TODO Reveal computer's first card to the user.
-# TODO Game ends immediately when user score goes over 21 or if the user or computer gets a blackjack.
-# TODO Ask the user if they want to get another card.
-# TODO Once the user is done and no longer wants to draw any more cards, let the computer play.
-# The computer should keep drawing cards unless their score goes over 16
-# TODO Compare user and computer scores and see if it's a win, loss, or draw.
-# TODO Print out the player's and computer's final hand and their scores at the end of the game.
-# TODO After the game ends, ask the user if they'd like to play again. Clear the console for a fresh start.
+    # # Deal both user and computer a starting hand of 2 random card values. (Done)
+    # # Deal both user and computer a starting hand of 2 random card values. (Done)
+    # # Detect when computer or user has a blackjack. (Ace + 10 value card). (done)
+    # # If computer gets blackjack, then the user loses (even if the user also has a blackjack). (done)
+    # # If the user gets a blackjack, then they win (unless the computer also has a blackjack). (done)
+    # # Calculate the user's and computer's scores based on their card values. (Done)
+    # #  If an ace is drawn, count it as 11. But if the total goes over 21, count the ace as 1 instead. (done)
+    # #  Reveal computer's first card to the user. (Done)
+    # #  Game ends immediately when user score goes over 21 or if the user or computer gets a blackjack. (done)
+    # #  Ask the user if they want to get another card. (done)
+    # # Once the user is done and no longer wants to draw any more cards, let the computer play. (done)
+    # # The computer should keep drawing cards unless their score goes over 16 (done)
+    # # TODO Compare user and computer scores and see if it's a win, loss, or draw.
+    # # TODO Print out the player's and computer's final hand and their scores at the end of the game.
+    # # TODO After the game ends, ask the user if they'd like to play again. Clear the console for a fresh start.
