@@ -42,6 +42,10 @@ for user_length in user_cards:
     user_total += user_length
 print(user_total)
 
+print(f"Your cards: {user_cards}, current score: {user_total}")
+print(f"Computer's first card: {computer_cards[0]}")
+print("Type 'y' to get another card, type 'n' to pass:")
+
 
 # TODO Deal both user and computer a starting hand of 2 random card values.
 
