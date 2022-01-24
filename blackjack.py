@@ -29,14 +29,19 @@ for i in range(2):
     computer_cards.append(random.choice(cards))
 
 computer_total = 0
-for computer_cards in range(comp_length):
-    print(comp_length)
-    print(computer_cards)
-    computer_total += computer_cards
 
+for comp_length in computer_cards:
+    # print(computer_cards)
+    # print(comp_length)
+    # # print(computer_cards[comp_length])
+    computer_total += comp_length
 print(computer_total)
-# print(user_cards)
-# print(camputer_cards)
+
+user_total = 0
+for user_length in user_cards:
+    user_total += user_length
+print(user_total)
+
 
 # TODO Deal both user and computer a starting hand of 2 random card values.
 
