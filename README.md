@@ -32,7 +32,7 @@
 <h3 align="center">Blackjack Game</h3>
 
   <p align="center">
-    Blackjack is a game that is played using cards. The goal of the game is to add up the cars to the largest number without going over twenty-one. If the cards in the hand add up more than twenty-one then its called a bust. Meaning the game is lost imidiatly. It doesent matter how much the user goes over twenty one then the user looses. The way the cards are counted are that all the cards from 2 - 10 are counted as their face value. The Jack, Queen, and King cards count as ten. The Ace card can count as 1 to the total or can count as 11. Depending if the user went over 21 or under the user can decide the value of the Ace.
+    Blackjack is a game that is played using cards. The goal of the game is to add up the cars to the largest number without going over twenty-one. If the cards in the hand add up more than twenty-one then its called a bust. Meaning the game is lost immediately. It doesent matter how much the user goes over twenty one then the user looses. The way the cards are counted are that all the cards from 2 - 10 are counted as their face value. The Jack, Queen, and King cards count as ten. The Ace card can count as 1 to the total or can count as 11. Depending if the user went over 21 or under the user can decide the value of the Ace.
     <br />
     <a href="https://github.com/sanduler/blackjack-game-py"><strong>Explore the docs »</strong></a>
     <br />
